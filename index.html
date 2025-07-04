@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页</title>
+    <style>
+        /* 基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 头部样式 */
+        header {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* 导航栏 */
+        nav {
+            background-color: #2c3e50;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background-color: #3498db;
+        }
+        
+        /* 内容区域 */
+        section {
+            padding: 60px 0;
+            background-color: white;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+            font-size: 2rem;
+        }
+        
+        /* 关于我 */
+        .about-content {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            padding: 0 20px;
+        }
+        
+        /* 技能 */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        
+        .skill-category {
+            flex: 1;
+            min-width: 250px;
+            margin: 10px;
+        }
+        
+        .skill-category h3 {
+            margin-bottom: 15px;
+            color: #3498db;
+        }
+        
+        /* 项目 */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .project-info {
+            padding: 20px;
+        }
+        
+        .project-info h3 {
+            margin-bottom: 10px;
+        }
+        
+        /* 联系我 */
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        
+        .contact-method {
+            text-align: center;
+            margin: 20px;
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .contact-method i {
+            font-size: 2rem;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+        
+        /* 页脚 */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <!-- 引入Font Awesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- 头部区域 -->
+    <header>
+        <div class="container">
+            <img src="profile.jpg" alt="个人照片" class="profile-img">
+            <h1>张三</h1>
+            <p class="tagline">前端开发工程师 | 网页设计师 | 技术爱好者</p>
+        </div>
+    </header>
+    
+    <!-- 导航栏 -->
+    <nav>
+        <ul>
+            <li><a href="#about">关于我</a></li>
+            <li><a href="#skills">技能</a></li>
+            <li><a href="#projects">项目</a></li>
+            <li><a href="#contact">联系我</a></li>
+        </ul>
+    </nav>
+    
+    <!-- 主要内容 -->
+    <main class="container">
+        <!-- 关于我 -->
+        <section id="about">
+            <h2>关于我</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>你好！我是张三，一名有3年前端开发经验的工程师。我热衷于创造美观、响应式的网页应用，并不断学习新技术来提升自己。</p>
+                    <p>我毕业于XX大学计算机科学专业，曾在多家科技公司担任前端开发职位，参与过多个大型项目的开发。</p>
+                    <p>工作之余，我喜欢阅读技术博客、参加开发者社区活动，并尝试各种新技术。我相信持续学习和分享是技术人成长的关键。</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 技能 -->
+        <section id="skills">
+            <h2>我的技能</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>前端技术</h3>
+                    <ul>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>React & Vue.js</li>
+                        <li>Responsive Design</li>
+                        <li>UI/UX 设计基础</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>后端技术</h3>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Express</li>
+                        <li>RESTful API 设计</li>
+                        <li>MongoDB</li>
+                        <li>MySQL</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>其他技能</h3>
+                    <ul>
+                        <li>Git 版本控制</li>
+                        <li>Webpack</li>
+                        <li>敏捷开发</li>
+                        <li>团队协作</li>
+                        <li>技术文档编写</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 项目 -->
+        <section id="projects">
+            <h2>我的项目</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="project1.jpg" alt="项目1" class="project-img">
+                    <div class="project-info">
+                        <h3>电子商务网站</h3>
+                        <p>一个全功能的电子商务平台，使用React和Node.js构建，包含商品展示、购物车、支付等功能。</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="project2.jpg" alt="项目2" class="project-img">
+                    <div class="project-info">
+                        <h3>任务管理应用</h3>
+                        <p>基于Vue.js的任务管理工具，支持多用户协作、任务分配和进度跟踪。</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="project3.jpg" alt="项目3" class="project-img">
+                    <div class="project-info">
+                        <h3>个人博客系统</h3>
+                        <p>使用MERN堆栈(MongoDB, Express, React, Node)构建的博客系统，支持Markdown编辑。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 联系我 -->
+        <section id="contact">
+            <h2>联系我</h2>
+            <div class="contact-info">
+                <div class="contact-method">
+                    <i class="fas fa-envelope"></i>
+                    <h3>电子邮件</h3>
+                    <p>zhangsan@example.com</p>
+                </div>
+                <div class="contact-method">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p>github.com/zhangsan</p>
+                </div>
+                <div class="contact-method">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <p>linkedin.com/in/zhangsan</p>
+                </div>
+                <div class="contact-method">
+                    <i class="fas fa-phone"></i>
+                    <h3>电话</h3>
+                    <p>+86 138 1234 5678</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 张三的个人主页. 保留所有权利.</p>
+            <p>最后更新: 2023年6月</p>
+        </div>
+    </footer>
+</body>
+</html>
