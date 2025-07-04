@@ -1,10 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <title>My Paper</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的论文 - MyPaper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .paper {
+            margin-bottom: 25px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-left: 4px solid #3498db;
+        }
+        .paper h2 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .paper-links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .paper-links a:hover {
+            text-decoration: underline;
+        }
+        .tag {
+            display: inline-block;
+            background: #e0f7fa;
+            color: #006064;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            margin-right: 5px;
+        }
+    </style>
+    <!-- 使用 Font Awesome 图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <h1>Welcome to My Paper</h1>
-    <p>This is a subpage under my personal site.</p>
+    <h1>我的论文列表</h1>
+
+    <!-- 论文 1 -->
+    <div class="paper">
+        <h2>基于深度学习的图像识别优化</h2>
+        <p><strong>作者：</strong> 你的名字, 合作者</p>
+        <p><strong>发表时间：</strong> 2023年</p>
+        <p><strong>摘要：</strong> 本文提出了一种新的深度学习模型，在 ImageNet 数据集上达到了 95% 的准确率...</p>
+        <div class="paper-links">
+            <a href="https://arxiv.org/abs/1234.5678" target="_blank">
+                <i class="fas fa-external-link-alt"></i> arXiv
+            </a>
+            <a href="https://doi.org/10.xxxx/yyyy" target="_blank">
+                <i class="fas fa-book"></i> DOI
+            </a>
+            <a href="https://ieeexplore.ieee.org/document/123456" target="_blank">
+                <i class="fas fa-university"></i> IEEE Xplore
+            </a>
+        </div>
+        <div style="margin-top: 10px;">
+            <span class="tag">深度学习</span>
+            <span class="tag">计算机视觉</span>
+        </div>
+    </div>
+
+    <!-- 论文 2 -->
+    <div class="paper">
+        <h2>量子计算在优化问题中的应用</h2>
+        <p><strong>作者：</strong> 你的名字, 合作者</p>
+        <p><strong>发表时间：</strong> 2022年</p>
+        <p><strong>摘要：</strong> 本文研究了量子计算在 TSP 问题中的优化性能...</p>
+        <div class="paper-links">
+            <a href="https://arxiv.org/abs/2345.6789" target="_blank">
+                <i class="fas fa-external-link-alt"></i> arXiv
+            </a>
+            <a href="https://doi.org/10.xxxx/zzzz" target="_blank">
+                <i class="fas fa-book"></i> DOI
+            </a>
+        </div>
+        <div style="margin-top: 10px;">
+            <span class="tag">量子计算</span>
+            <span class="tag">优化算法</span>
+        </div>
+    </div>
 </body>
 </html>
