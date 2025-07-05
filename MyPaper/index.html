@@ -42,11 +42,36 @@
             border-left: 0.25em solid #dfe2e5;
             margin: 0 0 16px 0;
         }
-        .home-link {
+        .notes-link {
             display: block;
             text-align: center;
             margin-top: 30px;
             font-size: 14px;
+            position: relative;
+        }
+        .notes-dropdown {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 4px;
+            padding: 10px 0;
+        }
+        .notes-dropdown a {
+            color: black;
+            padding: 8px 16px;
+            display: block;
+            text-align: center;
+        }
+        .notes-dropdown a:hover {
+            background-color: #f1f1f1;
+        }
+        .notes-link:hover .notes-dropdown {
+            display: block;
         }
     </style>
 </head>
@@ -103,8 +128,13 @@
             
         </ol>
         
-        <div class="home-link">
-            <a href="https://yuteam14.github.io/">返回主页</a>
+        <div class="notes-link">
+            <a href="#">浏览笔记 ▼</a>
+            <div class="notes-dropdown">
+                <a href="Note/文献阅读笔记-1.pdf" target="_blank">文献阅读笔记-1</a>
+                <!-- 未来可以在这里添加更多笔记链接 -->
+                <!-- <a href="Note/文献阅读笔记-2.pdf" target="_blank">文献阅读笔记-2</a> -->
+            </div>
         </div>
     </div>
 </body>
